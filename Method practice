@@ -1,0 +1,50 @@
+import java.io.*;
+public class java_home3
+{
+	public static void main(String[] args)throws IOException
+	{
+        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+        String inwid,inhig;
+        double innwid,innhig;
+        
+        System.out.print("Hight = ");
+        inhig = buf.readLine();
+        innhig = Double.parseDouble(inhig);
+        System.out.print("Width = ");
+        inlon = buf.readLine();
+        innwid = Double.parseDouble(inwid);
+        
+        rectangle rtg = new rectangle();
+        rtg.hig = innhig;
+        rtg.lon = innwid;
+        
+        System.out.println("Area = " + rtg.area());
+        System.out.println("Perimeter = " + rtg.perimeter());
+        System.out.println("Length = " + rtg.length());
+        
+        
+	}	
+	
+}
+class rectangle
+{
+    double lon,hig;
+    
+    double area()
+    {
+        return lon * hig;
+        
+        
+        
+    }
+    double perimeter ()
+    {
+        return 2*(lon + hig);
+        
+    }
+    
+    double length ()
+    {
+        return Math.sqrt(hig*hig+lon*lon);
+    }
+}
