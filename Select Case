@@ -1,0 +1,89 @@
+import java.io.*;
+public class java_home2
+{
+	public static void main (String args[])throws IOException
+	{
+		BufferedReader buf;
+		String inpfm,instr ;
+        int pfm,salary = 0,in,totals=0;
+		buf = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("請輸入職位級別，（EX:經理：1,副理：2) = " );
+		instr = buf.readLine();
+        in = Integer.parseInt(instr);
+        System.out.print("請輸入業績 ＝ ");
+        inpfm = buf.readLine();
+        pfm = Integer.parseInt(inpfm);
+        int casepfm = pfm /100000;
+        int bonuce;
+		
+        switch(in)
+        {
+            case 1 :
+            {
+                System.out.print(" 經理 ");
+                salary = 60000;
+                break;
+            }
+            case 2 :
+            {
+                System.out.print(" 副理 ");
+                salary = 50000;
+                break;
+            }
+            case 3 :
+            {
+                System.out.print(" 主任 ");
+                salary = 40000;
+                break;
+            }
+            case 4 :
+            {
+                System.out.print(" 課長 ");
+                salary = 30000;
+                break;
+            }
+            case 5 :
+            {
+                System.out.print(" 職員 ");
+                salary = 20000;
+                break;
+            }
+            default:
+                System.out.println("你不是本公司員工！！！");
+                
+        }
+        switch(casepfm)
+        {
+            case 1 :
+            {
+                 bonuce = pfm /100 ;
+                break;
+            }
+            case 2 :
+            {
+                bonuce = pfm /100 *2;
+                break;
+            }
+            case 3 :
+            {
+                bonuce = pfm /100 * 3;
+                break;
+            }
+            default:
+                bonuce = pfm /100 * 4+5000;
+                break;
+                
+        }
+        int total = salary + bonuce ;
+        System.out.println("本薪為 ＝" + salary+" ，獎金為 ＝ "+bonuce + "薪資為 ＝ " + total);
+        
+        
+        
+        
+
+        
+        
+		
+		
+	}
+}
