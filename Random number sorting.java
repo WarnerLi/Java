@@ -16,7 +16,7 @@ public class java_rnd
         
         for(int i =num.length-1; i>0 ; i--)
         {
-            boolean sss = false ;
+            boolean sss = true ;
             for(int j = 0 ; j < i;j++ )
             {
                 
@@ -25,9 +25,9 @@ public class java_rnd
                     tmp = num[j+1];
                     num[j+1] = num[j];
                     num[j] = tmp ;
-                    
+                    sss = false
                 }
-                if( !sss)
+                if(sss)
                     break ;
             }
             
