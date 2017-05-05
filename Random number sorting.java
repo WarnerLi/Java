@@ -1,23 +1,24 @@
 
-import java.util.Random;
-public class java_rnd
-{
-    
-    public static void main(String[] args)
-    {
-        //Random rnd = new Random();
-        int [] num = new int [10] ;
+package bubble;
+
+public class bubble {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		int [] num = new int [100] ;
         int tmp ;
         
         for(int i = 0 ; i < num.length ; i++)
         {
-            num[i] = (int)(Math.random()*10);
+            num[i] = (int)(Math.random()*100);
         }
-        
-        for(int i =num.length-1; i>0 ; i--)
+        boolean exchange = true ;
+        for(int i =num.length-1; i>0 ; --i)
         {
-            boolean sss = true ;
-            for(int j = 0 ; j < i;j++ )
+            
+            for(int j = 0 ; j < i;++j )
             {
                 
                 if(num[j] > num[j+1])
@@ -25,11 +26,12 @@ public class java_rnd
                     tmp = num[j+1];
                     num[j+1] = num[j];
                     num[j] = tmp ;
-                    sss = false
+                    exchange = false;
                 }
-                if(sss)
-                    break ;
+                
             }
+            if(exchange)
+                break ;
             
         }
         
@@ -38,9 +40,7 @@ public class java_rnd
             System.out.println("  "+num[i]);
             
         }
-        
-    }
-    
+
+	}
+
 }
-
-
