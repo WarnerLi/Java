@@ -5,7 +5,7 @@ public class java_rnd
     
     public static void main(String[] args)
     {
-        Random rnd = new Random();
+        //Random rnd = new Random();
         int [] num = new int [10] ;
         int tmp ;
         
@@ -16,7 +16,7 @@ public class java_rnd
         
         for(int i =num.length-1; i>0 ; i--)
         {
-            boolean sss = true ;
+            boolean sss = false ;
             for(int j = 0 ; j < i;j++ )
             {
                 
