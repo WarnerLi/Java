@@ -1,0 +1,33 @@
+package insertion;
+
+public class insertion_sort {
+
+	public static void main(String[] args) {
+		int [] num = new int [10] ;
+        int tmp ;
+        
+        for(int i = 0 ; i < num.length ; i++)
+        {
+            num[i] = (int)(Math.random()*10);
+        }
+
+        for(int i = 1; i < num.length; i ++){
+             tmp = num[i];          // tmp放要插入的值
+            int j = i - 1;
+            while( j > -1 && tmp < num[j]){
+                num[j+1] = num[j];    // 向右移
+                j--;
+            }
+            num[j+1] = tmp;            // 插入新值
+        }   
+        
+        for(int i =0 ; i<num.length ; i++)
+        {
+            System.out.print("  "+num[i]);
+            
+        }
+
+
+	}
+
+}
