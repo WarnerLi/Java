@@ -1,8 +1,10 @@
 package insertion;
 
-public class insertion_sort {
+public class insertion_sort 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		int [] num = new int [10] ;
         int tmp ;
         
@@ -11,10 +13,12 @@ public class insertion_sort {
             num[i] = (int)(Math.random()*10);
         }
 
-        for(int i = 1; i < num.length; i ++){
+        for(int i = 1; i < num.length; i ++)
+	{
              tmp = num[i];          // tmp放要插入的值
             int j = i - 1;
-            while( j > -1 && tmp < num[j]){
+            while( j > -1 && tmp < num[j])
+	    {
                 num[j+1] = num[j];    // 向右移
                 j--;
             }
