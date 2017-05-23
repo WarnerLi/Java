@@ -35,25 +35,19 @@ public class point {
 		
 		while(true)
 		{
-			if((num1+num3) ==(num5+num7))
-			{
-				break;
-			}
-			else
+			if((num1+num3) !=(num5+num7))
 			{
 				num7++;
 			}
-		}
-		while(true)
-		{
-			if((num2+num4) ==(num6+num8 ))
-			{
-				break;
-			}
-			else
+			else if((num2+num4) !=(num6+num8 ))
+
 			{
 				num8++;
 			}
+			else 
+				break;
+		
+						
 
 		}
 		
